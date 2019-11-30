@@ -1,0 +1,55 @@
+<!--
+  Generated template for the HelpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Trợ giúp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <div class="contact-info">
+    <div class="main-info">
+
+      <div class="info-box" (click)="openDialogHelp_1()">
+          <div class="flex-column">
+              <p>Tại sao không ai trả lời tôi?</p>
+              <span>{{info.infos.Knowledge}}</span>
+          </div>
+          
+      </div>
+
+      <div class="info-box" (click)="openDialogHelp_2()">
+          <div class="flex-column">
+              <p>Tôi có thể làm gì với những thành viên không mong đợi?</p>
+              <span>{{info.infos.Knowledge}}</span>
+
+          </div>
+      </div>
+
+      <div class="info-box" (click)="openDialogHelp_3()">
+          <div class="flex-column">
+              <p>FindMyLove có thực sự miễn phí?</p>
+              <span>{{info.infos.Knowledge}}</span>
+
+          </div>
+      </div>
+
+      <div class="info-box" (click)="openDialogHelp_4()">
+          <div class="flex-column">
+              <p>Làm thế nào để xóa tài khoản của tôi?</p>
+              <span>{{info.infos.Knowledge}}</span>
+          </div>
+      </div>
+    
+    </div>
+  </div>
+</ion-content>
+

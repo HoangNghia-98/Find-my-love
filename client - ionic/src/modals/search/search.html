@@ -1,0 +1,143 @@
+<div class="image-background">
+    
+</div>
+
+<ion-header>
+        <ion-toolbar>
+
+        <ion-buttons start>
+          <button ion-button (click)="dismiss()">
+            <ion-icon name="md-close"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>
+            Tìm kiếm theo
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button >
+                <ion-icon name="trash"></ion-icon>
+            </button>
+          </ion-buttons>
+    
+      </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <div class="title-search">
+                <span>Thuộc tính</span>
+    </div>
+    <div class="contact-info">
+        <div class="main-info">
+           
+            <div class="info-box" (click)="openDialogKnowledge()">
+                <div class="col-9 flex-column">
+                    <p>Học thức</p>
+                    
+            
+                </div>
+                <div class="col-3">
+                    <span>{{data?.knowledge || "Tất cả"}}</span>
+                </div>
+            </div>
+
+            <div class="info-box" (click)="openDialogSearching()">
+                <div class="col-9 flex-column">
+                    <p>Đang tìm kiếm</p>
+                    
+            
+                </div>
+                <div class="col-3">
+                    <span>{{data?.looking || "Tất cả"}}</span>
+                </div>
+            </div>
+
+            <div class="info-box" (click)="openDialogRelate_status()">
+                <div class="col-9 flex-column">
+                    <p>Trạng thái quan hệ</p>
+                    
+            
+                </div>
+                <div class="col-3">
+                    <span>{{data?.relationship || "Tất cả"}}</span>
+                </div>
+            </div>
+
+            <div class="info-box" (click)="openDialogHeight_least()">
+                <div class="col-9 flex-column">
+                    <p>Cao từ</p>
+                    
+            
+                </div>
+                <div class="col-3">
+                    <span>{{data?.min_height || "Tất cả"}}</span>
+                </div>
+            </div>
+
+            <div class="info-box" (click)="openDialogHeight_maximum()">
+                <div class="col-9 flex-column">
+                    <p>Cao đến</p>
+                    
+            
+                </div>
+                <div class="col-3">
+                    <span>{{data?.max_height || "Tất cả"}}</span>
+                </div>
+            </div>
+
+            <div class="info-box" (click)="openDialogSmoking()">
+                <div class="col-9 flex-column">
+                    <p>Hút thuốc</p>
+                    
+            
+                </div>
+                <div class="col-3">
+                    <span>{{data?.smoke || "Tất cả"}}</span>
+                </div>
+            </div>
+
+            <div class="info-box" (click)="openDialogReligion()">
+                <div class="col-9 flex-column">
+                    <p>Tôn giáo</p>
+                    
+            
+                </div>
+                <div class="col-3">
+                    <span>{{data?.religion || "Tất cả"}}</span>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="col-9 flex-column">
+                            <p>Độ tuổi</p>
+                </div>
+            </div>
+            <div>
+                    <ion-range dualKnobs="true" [(ngModel)]="age" color="primary"  min="18" max="70" step="1">
+                        <label range-left >{{age.lower}}</label>
+                        <label range-right>{{age.upper}}</label>
+                    </ion-range>
+            </div>     
+
+        </div>
+    </div>
+
+    <div no-border>
+            <button (click)="saveFilter()" ion-button full>Tìm kiếm</button>
+    </div>
+        
+  
+
+</ion-content> 
+
+
+<!-- <ion-content>
+   
+        <ion-searchbar
+          [(ngModel)]="myInput"
+          [showCancelButton]="shouldShowCancel"
+          (ionInput)="onInput($event)"
+          (ionCancel)="onCancel($event)">
+       </ion-searchbar>
+     </ion-footer>
+</ion-content> -->

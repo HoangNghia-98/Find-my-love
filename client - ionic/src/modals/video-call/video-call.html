@@ -1,0 +1,18 @@
+<ion-content padding [class.load-video]="apirtc.showHangup" [class.hide-video]="!apirtc.showHangup">
+    <ion-grid>
+        <div  style="width:100%;" id="remote"></div>
+        <div  id="mini" ></div>      
+        <ion-row class="action-video">
+          <div class="action-box">
+              <button *ngIf="!apirtc.showAnswer && apirtc.showHangup" ion-button color="light" ><i class="fas fa-microphone"></i></button>
+              <button *ngIf="!apirtc.showAnswer && apirtc.showHangup" ion-button color="danger" (click)='apirtc.HangUp() ;' class="hang-up"><i class="fas fa-phone"></i></button>
+              <button *ngIf="!apirtc.showAnswer && apirtc.showHangup" ion-button color="light"  ><i class="fas fa-video"></i></button>
+  
+              <button *ngIf="apirtc.showAnswer" ion-button color="light" (click)='apirtc.AnswerCall(apirtc.incomingCallId)' class="answer"><i class="fas fa-video"></i></button>
+              <button *ngIf="apirtc.showAnswer" ion-button color="light" (click)='apirtc.RejectCall(apirtc.incomingCallId) ;' class="close"><i class="fas fa-times"></i></button>
+              
+          </div>
+        </ion-row>
+        
+    </ion-grid>
+  </ion-content>

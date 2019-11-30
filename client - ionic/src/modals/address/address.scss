@@ -1,0 +1,40 @@
+@import "../../theme/variables.scss";
+page-address {
+  .item-md{
+    padding: 0 16px;
+  }
+  .item-inner{
+    padding: 0!important; 
+  }
+  .label-md{
+    margin-right: 0;
+  }
+  .list-group-item {
+    font-size: 13.5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  .list-md {
+    margin: 9px 0 16px !important;
+  }
+
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 24px !important;
+    font-weight: 500;
+    color: #424242;
+    text-align: center !important;
+  }
+
+  .bar-button-md{
+    font-size: 2rem !important;
+  }
+
+  .button-md-light {
+    color: #000;
+    background-color: #f4f4f4;
+    float: right;
+    margin: -18px 35px 0 0;
+  }
+}

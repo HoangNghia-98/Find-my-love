@@ -1,0 +1,118 @@
+
+<ion-content>
+   <ion-navbar>
+    </ion-navbar>
+<div class="head-profile" [ngStyle]="{'background': info.infos.image?'url('+info.infos.image+')':'url(assets/img/default-image.png)'}">        
+  <div class="upload-image" >
+      <ion-spinner name="ios" color="primary" *ngIf="!loadImageDone"></ion-spinner>
+    <img *ngIf="loadImageDone" src="assets/img/upload.png">
+    <input *ngIf="loadImageDone" type="file" class="uploadImage"
+            id="uploadImg" (change)="uploadImage($event)">
+    
+  </div>  
+</div>
+  
+<div class="contact-info">
+    <div class="main-info">
+        <div class="flex" (click)="openDialogName()">
+            <div class="col-10 head-info">
+                <p>{{info.infos.displayName||"Khách"}}</p>
+                <span>,  {{info.infos.age}} tuổi</span>
+            </div>
+            <div class="col-2">
+                <i class="fas fa-pencil-alt"></i>
+            </div>
+        </div>
+        <div class="flex" >
+            <i class="fas fa-map-marker-alt"></i>
+            <span>{{info.infos.address}}</span>
+        </div>
+        <div class="flex verify-box" > 
+            <div class="col-9">
+                <i  class="fas fa-circle" [ngStyle]="{'color': info.infos.active?'green':'red'}"></i>
+                <span>{{info.infos.active?"Đã xác thực":"Chưa xác thực thông tin"}}</span>
+            </div>
+            <div class="col-3 verify" *ngIf=" !info.infos.active" (click)="openVerifyAlert()">
+                <span>Xác thực</span>
+            </div>
+        </div>
+    </div>
+    <div class="info-box" (click)="openDialogAddress()">
+        <div class="col-10 flex-column">
+            <p>Địa chỉ</p>
+            <span>{{info.infos.address}}</span>
+            <span class="add" *ngIf="!info.infos.address">Thêm</span>
+        </div>
+        <div class="col-2">
+            <i class="fas fa-pencil-alt"></i>
+        </div>
+    </div>
+
+    <div class="info-box" (click)="openDialogJob()">
+            <div class="col-10 flex-column">
+                <p>Công việc</p>
+                <span>{{info.infos.job}}</span>
+                <span class="add" *ngIf="!info.infos.job">Thêm</span>
+            </div>
+            <div class="col-2">
+                <i class="fas fa-pencil-alt"></i>
+            </div>
+   </div>
+
+    <div class="info-box" (click)="openDialogRelate_status()">
+        <div class="col-10 flex-column">
+            <p>Trạng thái quan hệ</p>
+            <span>{{info.infos.relate_status}}</span>
+            <span class="add" *ngIf="!info.infos.relate_status">Thêm</span>
+        </div>
+        <div class="col-2">
+            <i class="fas fa-pencil-alt"></i>
+        </div>
+    </div>
+
+    <div class="info-box" (click)="openDialogSuitable()">
+        <div class="col-10 flex-column suitable-box">
+            <p>Đối tượng phù hợp</p>
+            <span *ngIf="info.infos.suitable" class="suitable">
+                <div>Mối quan hệ: {{info.infos.suitable.relationShip}}</div>
+                <div>Giới tính: {{info.infos.suitable.sex}}</div>
+                <div>Độ tuổi: {{info.infos.suitable.minAge}} - {{info.infos.suitable.maxAge}}</div>
+            </span>
+            <span class="add" *ngIf="!info.infos.suitable">Thêm</span>
+        </div>
+        <div class="col-2">
+            <i class="fas fa-pencil-alt"></i>
+        </div>
+    </div>
+    <div class="info-box" (click)="openDialogHeight()">
+        <div class="col-10 flex-column">
+            <p>Chiều cao</p>
+            <span>{{info.infos.height}}</span>
+            <span class="add" *ngIf="!info.infos.height">Thêm</span>
+        </div>
+        <div class="col-2">
+            <i class="fas fa-pencil-alt"></i>
+        </div>
+    </div>
+    <div class="info-box" (click)="openDialogWeight()">
+        <div class="col-10 flex-column">
+            <p>Cân nặng</p>
+            <span>{{info.infos.weight}}</span>
+            <span class="add" *ngIf="!info.infos.weight">Thêm</span>
+        </div>
+        <div class="col-2">
+            <i class="fas fa-pencil-alt"></i>
+        </div>
+    </div>
+    <div class="info-box" (click)="openDialogReligion()">
+        <div class="col-10 flex-column">
+            <p>Tôn giáo</p>
+            <span>{{info.infos.religion}}</span>
+            <span class="add" *ngIf="!info.infos.religion">Thêm</span>
+        </div>
+        <div class="col-2">
+            <i class="fas fa-pencil-alt"></i>
+        </div>
+    </div>
+</div>
+</ion-content>

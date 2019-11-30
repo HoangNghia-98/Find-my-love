@@ -1,0 +1,113 @@
+@import "../../theme/variables.scss";
+
+// 160, 156, 158, 0.5
+page-filter{
+// * {
+//     color: #000;
+// }
+.header-md::after{
+    bottom: -7px;    
+    height: 0px;
+    width: 88%;
+    height: 5px;
+    margin-left: 6%;
+}
+ion-header{
+    
+}
+.image-background{
+    background-image: linear-gradient(rgba(92, 91, 91, 0.065),rgba(92, 91, 91, 0.065)),url(https://i.pinimg.com/originals/ae/9f/73/ae9f732d6094233e902ca2bfdc8e2a84.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position: center;
+    filter: blur(4px);
+}
+  button .button-inner{
+    color:$grey-dark;
+    font-size: 22.5px;
+}
+
+.flex{
+    align-items: center;
+    margin-bottom: 4px;
+}
+p{
+    margin-bottom:0!important;
+}
+i {
+    font-size: 10px;
+    margin-right: 8px;
+    width: 10px;
+}
+    ion-app.md [padding] {
+        padding-top: 0px;
+    }
+    .back-button-icon-md{
+        color:white;
+    }
+    ion-navbar.toolbar{
+        position: absolute;
+    left: 0;
+    }
+    
+    .add{
+        color:$light-blue-500;
+    }
+    .bar-buttons-md{
+        margin-left: 7px;
+    }
+    .toolbar-md {
+        padding:11px 4px;
+        min-height: 51px;
+    }
+    .toolbar-content-md{
+        order: 4;
+    }
+    .toolbar-title-md {
+        padding: 0 75px;
+        font-size: 2.5rem !important;
+        // color: white!important;
+    }
+    .toolbar-background-md{
+        background: none!important;
+    }
+    .contact-info {
+        padding:30px 10px;
+        p{
+            color: $grey-darkest;
+        }
+       
+        .main-info{
+            padding-bottom: 8px;
+            .head-info{
+                display: flex;
+                align-items: center;
+                p{
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+        }
+        .info-box{
+            display: flex;
+            align-items: center;
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(180, 178, 178, 0.5);
+            width: 77%;
+            margin: 0 auto;
+            border-bottom-style: dashed;
+            .col-12{
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+                font-size: larger;
+                ion-icon{
+                    padding-top: 3.5px;
+                }
+            }
+        }
+    }
+   ion-content{
+    background: none!important;
+   }
+}

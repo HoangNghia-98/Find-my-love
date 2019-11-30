@@ -1,0 +1,10 @@
+@import "../../theme/variables.scss";
+
+page-tabs {
+    .tabs-md .tabbar{
+        background: white;
+    }
+    .tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text{
+        margin-top:0;
+    }
+}

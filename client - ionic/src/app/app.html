@@ -1,0 +1,30 @@
+<div *ngIf="showSplash" class="splash">
+    <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+</div>
+<!-- <ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list *ngIf="user.token">
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          {{p.title}}
+        </button>
+      </ion-list>
+      <ion-list>
+        <button *ngIf="!user.token" menuClose ion-item >
+           Welcome
+        </button>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu> -->
+<ion-nav #content [root]="rootPage"></ion-nav>

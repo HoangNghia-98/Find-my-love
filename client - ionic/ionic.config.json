@@ -1,0 +1,7 @@
+{
+  "name": "find-my-love",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,38 @@
+<div class="preloader" [class.loaded]="loadDone">
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    <div class="spinner-custom">
+    </div>
+    <i class="fa fa-heart icon-loader" aria-hidden="true"></i>
+</div>
+<ion-header>
+    <ion-toolbar color="white">
+        <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel"
+         [animated]="true" (ionCancel)="onCancel($event)" (ionInput)="getItems($event)" [style.width]="info?.type =='admin'?'100%':'90%'">
+        </ion-searchbar>
+        <div (click)="goBack()" class="back-btn" *ngIf="info?.type !='admin'">
+            <ion-icon name="arrow-forward"></ion-icon>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<!-- (click)="openChat(friend.info)" -->
+<ion-content padding>
+
+    <div *ngFor="let support of supportes" class="row" (click)="openChat(support)">
+        <div class="image">
+            <img src="{{support.users[0]?.photoURL || 'https://i.imgur.com/6RUJRyM.png'}}">
+            <div *ngIf="support.users[1]?.isOnline || support.users[0]?.isOnline" class="status">
+                <i class="fas fa-circle"></i>
+            </div>
+        </div>
+        <div *ngIf="info?.type!='admin'" class="flex-column title-info">
+            <span item-start>{{support.support?.displayName || 'Khách'}}, {{support.otherName || 'Khách'}} </span>
+            <div class="name-box"><span class="name">{{support.lastMessage}}</span> <span class="time">{{support.lastTime}}</span></div>
+        </div>
+        <div *ngIf="info?.type=='admin'" class="flex-column title-info">
+          <span item-start>{{support.users[0]?.displayName || 'Khách'}}, {{support.users[1]?.displayName || 'Khách'}} </span>
+          <div class="name-box"><span class="name">{{support.lastMessage}}</span> <span class="time">{{support.lastTime}}</span></div>
+      </div>
+    </div>
+</ion-content>

@@ -1,0 +1,74 @@
+page-help {
+    .contact-info {
+        padding: 15px 20px;
+        p{
+            // color: $grey-darkest;
+            color: #000;
+        }
+        
+        .main-info{
+            padding-bottom: 8px;
+            .head-info{
+                display: flex;
+                align-items: center;
+                p{
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+        }
+        .info-box{
+            display: flex;
+            align-items: center;
+            padding: 12px 0 6px;
+            font-size: 14.5px!important;
+            border-bottom: 1px solid #eeeeee;
+        }
+    }
+    .flex-column{
+        word-spacing: 1.2px !important;
+    }
+    .toolbar-title-md{
+        padding: 0 49px;
+    }
+
+}
+
+.alert-md .alert-title {
+    font-size: 17px !important;
+    font-weight: bold !important;
+}
+
+.alert-md .alert-head {
+    text-align: center !important;
+    padding: 15px 24px 20px !important;
+}
+
+.alert-md .alert-wrapper {
+    width: fit-content;
+    height: fit-content;
+}
+
+.alert-md .alert-message {
+    max-height: 300px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.75) !important;
+    padding: 0 24px 24px 35px !important;
+}
+
+.alert-md .alert-button .button-inner {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.alert-md .alert-button {
+    padding-top: 0 !important;
+}
+
+.alert-title {
+    margin: 0;
+    padding: 0;
+}

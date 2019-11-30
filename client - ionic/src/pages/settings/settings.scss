@@ -1,0 +1,105 @@
+@import "../../theme/variables.scss";
+.flex{
+    align-items: center;
+}
+h4{
+    margin-bottom: 0!important;
+}
+page-settings {
+    .col-2{
+        text-align: right;
+        padding-right: 25px !important;
+        i{
+            margin-right: 6px;
+            font-size: 16px;
+            width: 16px;
+        }
+        ion-icon{
+            font-size: 20.5px !important;
+        }
+    }
+    .col-10{
+        padding-left: 6px!important;
+    }
+    ion-app.md [padding] {
+        padding-top: 0px;
+    }
+    .back-button-icon-md{
+        color:white;
+    }
+    .toolbar-background-md{
+        background: unset;
+    }
+    ion-navbar.toolbar{
+        position: absolute;
+    left: 0;
+    }
+    .head-profile{
+               *{
+                   color:white;
+               }
+               background: url(https://i.imgur.com/XFi7HCp.png);
+               text-align: center;
+               padding-top: 50px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               >*{
+                   margin-bottom: 20px;
+               }
+               h4{
+                   font-size:18px;
+                   font-weight: 600;
+               }
+               span{
+                   font-size: 15px;
+               }
+               .avatar{
+                 position: relative;
+                   >img{
+                       border-radius: 50%;
+                       width: 110px;
+                       height: 110px;
+                       min-width: 80px;
+                   }
+               }
+                height: 230px;
+                background-position: top center!important;
+                background-size: cover!important;
+                background-repeat: no-repeat!important;
+    }
+    .main-content{
+        padding: 8px 6%;
+        .info-box{
+            display: flex;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid #eeeeee;
+        } 
+    }
+        
+    .logout{
+        padding-left: 16px;
+        .button-outline-md{
+            border-color:rgb(110, 110, 255);
+        }
+        button .button-inner{
+            color:rgb(110, 110, 255);
+        }
+    }
+    .upload-image{
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      bottom: 0px;
+      right: 0px;
+      .uploadImage{
+        position: absolute;
+        top: 0;
+        right: 0px;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+      }
+    }
+}

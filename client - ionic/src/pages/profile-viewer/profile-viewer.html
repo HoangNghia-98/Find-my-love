@@ -1,0 +1,96 @@
+<ion-content>
+    <ion-navbar>
+    </ion-navbar>
+    <ion-fab right top >
+        <button ion-fab class="btn-head" (click)="buttonAction()">
+            <ion-spinner name="ios" color="white" *ngIf="loadingFriend"></ion-spinner>
+            <i *ngIf="!isFriend && !loadingFriend" class="fas fa-user-plus"></i>
+            <i *ngIf="isFriend && !loadingFriend" class="fab fa-facebook-messenger"></i>
+        </button>
+    </ion-fab>
+    <div class="head-profile" [ngStyle]="{'background': user.image?'url('+user.image+')':'url(https://i.imgur.com/6RUJRyM.png)'}">
+    </div>
+    <div class="contact-info">
+        <div class="main-info">
+            <div class="flex">
+                <div class="col-9 head-info">
+                    <p>{{user.displayName||"Khách"}}</p>
+                    <span>, {{user.age}} tuổi</span>
+                </div>
+                <div class="col-3">
+                    <button *ngIf="isFriend" ion-button clear (click)="deleteFriend()">Hủy kết bạn</button>
+                </div>
+            </div>
+            <div class="flex">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>{{user.address}}</span>
+            </div>
+            <div class="flex">
+                <i class="fas fa-circle" [ngStyle]="{'color': user.active?'green':'red'}"></i>
+                <span>{{user.active?"Đã xác thực":"Chưa xác thực thông tin"}}</span>
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="col-10 flex-column">
+                <p>Địa chỉ</p>
+                <span>{{user.address}}</span>
+                <span class="add" *ngIf="!user.address">Không rõ</span>
+            </div>
+            <div class="col-2">
+                
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="col-10 flex-column suitable-box">
+              <p>Đối tượng phù hợp</p>
+              <span *ngIf="user.suitable" class="suitable">
+                  <div>Mối quan hệ: {{user.suitable.relationShip}}</div>
+                  <div>Giới tính: {{user.suitable.sex}}</div>
+                  <div>Độ tuổi: {{user.suitable.minAge}} - {{user.suitable.maxAge}}</div>
+              </span>
+              <span class="add" *ngIf="!user.suitable">Không rõ</span>
+          </div>
+          <div class="col-2">
+            
+          </div>
+        </div>
+        <div class="info-box">
+            <div class="col-10 flex-column">
+                <p>Chiều cao</p>
+                <span>{{user.height}}</span>
+                <span class="add" *ngIf="!user.height">Không rõ</span>
+            </div>
+            <div class="col-2">
+                
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="col-10 flex-column">
+                <p>Cân nặng</p>
+                <span>{{user.weight}}</span>
+                <span class="add" *ngIf="!user.weight">Không rõ</span>
+            </div>
+            <div class="col-2">
+                
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="col-10 flex-column">
+                <p>Tôn giáo</p>
+                <span>{{user.religion}}</span>
+                <span class="add" *ngIf="!user.religion">Không rõ</span>
+            </div>
+            <div class="col-2">
+                
+            </div>
+        </div>
+    </div>
+
+    <ion-fab right bottom (click)="changeLikeStatus()" class="btn-bottom">
+        <button ion-fab color="light" >
+            <ion-spinner name="ios" color="primary" *ngIf="loading"></ion-spinner>
+            <ion-icon name="heart-outline" color="pink" *ngIf="!isLiked && !loading" ></ion-icon>
+            <ion-icon name="heart" color="pink" *ngIf="isLiked && !loading"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-content>

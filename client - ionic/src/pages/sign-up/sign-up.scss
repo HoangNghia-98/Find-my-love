@@ -1,0 +1,67 @@
+@import "../../theme/variables.scss";
+
+legend{
+    max-width: 25%!important;
+    text-align: center;
+}
+
+page-sign-up{
+    fieldset{
+        margin-top: 24px;
+        border-top: 1px solid $grey!important;
+    }
+    .image-background{
+        background: url('../assets/img/signup-background.jpeg') no-repeat white;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        opacity: 0.3;
+    }
+    .ion-page.show-page{
+        opacity: 0.9;
+    }
+    .image-logo{
+        height: 60px;
+        text-align: center;
+        margin-bottom: 10vh;
+        img{
+            height: 100%;
+            opacity: 0.8;
+        }
+    }
+    .label-md[stacked] {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .item-md{
+        padding-left: 4px;
+         padding-right: 4px;
+    }
+    .scroll-content {
+        padding: 16px 32px;
+    }
+    .bar-button-default-md{
+        color:$grey-light;
+    }
+    .content-md,.toolbar-background-md,.item-md{
+        background: unset;
+    }
+    .social-box{
+        @include flex-space;
+        margin-top: 8px;
+        .social-login{
+            span{
+                i{
+                    margin-top: 12px;
+                    font-size: 17px;
+                    color:white;
+                    height:30px;
+                    max-width: 30px;
+                }
+            }
+        }
+    }
+    
+}

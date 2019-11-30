@@ -1,0 +1,81 @@
+
+  <div class="image-background"></div>
+
+  <ion-header>
+      <ion-toolbar>
+        
+          <ion-buttons >
+              <button ion-button (click)="dismiss()">
+                <ion-icon name="md-close"></ion-icon>
+              </button>
+          </ion-buttons>
+
+          <ion-title>Đối tượng phù hợp</ion-title>    
+      </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+        <!-- <ion-item>
+            <ion-label>Đang tìm kiếm</ion-label>
+            <ion-select [(ngModel)]="data.relationship">
+              <ion-option value="Hỏi tôi">Hỏi tôi</ion-option>
+              <ion-option value="Quan hệ nghiêm túc">Quan hệ nghiêm túc</ion-option>
+            </ion-select>
+        </ion-item> -->
+    <ion-list radio-group [(ngModel)]="suitable.relationShip">     
+      <ion-list-header>
+        <b>Đang tìm kiếm</b>
+      </ion-list-header>     
+      <ion-item>
+        <ion-label>Hỏi tôi</ion-label>
+        <ion-radio value="Hỏi tôi"></ion-radio>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Quan hệ nghiêm túc</ion-label>
+        <ion-radio value="Quan hệ nghiêm túc"></ion-radio>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Hẹn hò</ion-label>
+        <ion-radio value="Hẹn hò"></ion-radio>
+      </ion-item>
+      <ion-item>
+          <ion-label>Tình bạn</ion-label>
+          <ion-radio value="Tình bạn"></ion-radio>
+        </ion-item>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="suitable.sex">     
+      <ion-list-header>
+        <b>với</b>
+      </ion-list-header>     
+      <ion-item>
+       <ion-radio value="Nam"></ion-radio>
+       <ion-label>một anh</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>một phụ nữ</ion-label>
+        <ion-radio value="Nữ"></ion-radio>
+      </ion-item>
+
+     <ion-item>
+      <ion-label>một anh chàng hoặc cô gái</ion-label>
+      <ion-radio value="Không rõ"></ion-radio>
+     </ion-item>
+   
+   </ion-list>   
+    
+   <div class="age">
+      <b class="title-age">Độ tuổi</b>
+      <ion-range dualKnobs="true" [(ngModel)]="structure" color="primary"  min="18" max="70" step="1">
+          <label range-left >{{structure.lower}}</label>
+          <label range-right>{{structure.upper}}</label>
+      </ion-range>
+  </div>
+
+  <div no-border>
+    <button (click)="closeAndSave()" ion-button full>LƯU</button>
+  </div>
+  </ion-content>

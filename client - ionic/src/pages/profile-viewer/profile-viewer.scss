@@ -1,0 +1,124 @@
+@import "../../theme/variables.scss";
+page-profile-viewer {
+    .suitable-box{
+      .suitable{
+        padding-left: 4px;
+        font-size: 14px;
+      }
+    }
+    .col-2{
+        text-align: right;
+        i{
+            margin-right: 6px;
+            font-size: 16px;
+            width: 16px;
+        }
+    }
+    .col-3{
+      padding: 0;
+      button{
+        padding: 0;
+      }
+      span{
+        font-size: 12px;
+        color: #f7aabf;
+      }
+    
+    }
+    .col-10{
+        padding-left: 6px!important;
+    }
+    ion-app.md [padding] {
+        padding-top: 0px;
+    }
+    .back-button-icon-md{
+        color:white;
+    }
+    .toolbar-background-md{
+        background: unset;
+    }
+    ion-navbar.toolbar{
+        position: absolute;
+    left: 0;
+    }
+    .active{
+        color:$brand-success!important;
+    }
+    .non-active{
+        color:$brand-danger!important;
+    }
+
+    .head-profile{
+        height: 250px;
+        background-position: top center!important;
+        background-size: cover!important;
+        background-repeat: no-repeat!important;
+    }
+    .add{
+        color:$grey;
+    }
+    .contact-info {
+        padding:5% 6%;
+        p{
+            color: $grey-darkest;
+        }
+       
+        .main-info{
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eeeeee;
+            .head-info{
+                display: flex;
+                align-items: center;
+                padding: 0;
+                p{
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+        }
+        .info-box{
+            display: flex;
+            align-items: center;
+            padding: 9px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+    }
+   
+    .btn-bottom{
+        width: 50px;
+        height: 50px;
+        margin-bottom: 8px;
+        ion-icon{
+            font-size:30px;
+        }
+    } 
+   
+    .button-inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        i{
+            font-size: 20px;
+            width: 20px;
+            margin: 0;
+            color: whitesmoke;
+        }
+       .fab{
+        font-size: 28px;
+        width: 28px;
+        height: 28px;
+       }
+       
+    }
+
+    .btn-head{
+        background: linear-gradient(to bottom left,rgba(245, 64, 115, 0.82), rgba(255, 176, 198, 0.7));
+    }
+    ion-icon.icon.icon-md.item-icon {
+        width: 50px;
+        height: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

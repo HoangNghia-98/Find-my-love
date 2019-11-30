@@ -1,0 +1,66 @@
+<ion-content>
+    <div class="head-profile">
+        <div class="avatar">
+            <img src="{{info.infos.photoURL?info.infos.photoURL:'https://i.imgur.com/6RUJRyM.png'}}">
+            <div class="upload-image" >
+                <ion-spinner name="ios" color="primary" *ngIf="!loadImageDone"></ion-spinner>
+              <img *ngIf="loadImageDone" src="assets/img/upload.png">
+              <input *ngIf="loadImageDone" type="file" class="uploadImage"
+                      id="uploadImg" (change)="uploadImage($event)">
+              
+            </div> 
+        </div>
+        <div class="flex">
+            <h4>{{info.infos.fullname||"Khách"}}</h4>
+            <span>, {{info.infos.age}} tuổi</span>
+        </div>
+
+    </div>
+    <div class="main-content">
+        <div class="info-box" (click)="navProfile()">
+            <div class="col-10 ">
+                <p>Trang cá nhân</p>
+            </div>
+            <div class="col-2">
+                <i class="far fa-user"></i>
+            </div>
+        </div>
+        <div class="info-box" *ngIf="info.infos.type != 'admin'" (click)="navSupport()">
+            <div class="col-10 ">
+                <p>Thuê người tư vấn</p>
+            </div>
+            <div class="col-2">
+                <ion-icon ios="ios-people-outline" md="md-people"></ion-icon>
+                <!-- <i class="far fa-user"></i> -->
+            </div>
+        </div>
+        <div class="info-box" (click)="navListSupport()">
+          <div class="col-10 ">
+              <p>Danh sách tư vấn</p>
+          </div>
+          <div class="col-2">
+            <ion-icon ios="ios-list-box-outline" md="md-list-box"></ion-icon>
+          </div>
+      </div>
+        <div class="info-box" (click)="navSetting()">
+            <div class="col-10 ">
+                <p>Cài đặt</p>
+            </div>
+            <div class="col-2">
+                    <i class="fas fa-cog"></i>
+            </div>
+        </div>
+        <div class="info-box" (click)="navHelpPage()">
+            <div class="col-10 ">
+                <p>Hỗ trợ</p>
+            </div>
+            <div class="col-2">
+                    <i class="far fa-question-circle"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="logout">
+        <button ion-button outline (click)="logout()">Đăng xuất</button>
+    </div>
+</ion-content>

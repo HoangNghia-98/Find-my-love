@@ -1,0 +1,46 @@
+
+<div class="image-background"></div>  
+
+<ion-header>
+        <ion-toolbar >
+
+        <ion-buttons start>
+          <button ion-button (click)="dismiss()">
+            <ion-icon name="md-close"></ion-icon>
+          </button>
+        </ion-buttons>
+       
+        <ion-title>
+            Cài đặt
+        </ion-title>
+        <!-- <ion-buttons end>
+            <button ion-button >
+                <ion-icon name="trash"></ion-icon>
+            </button>
+          </ion-buttons> -->
+    
+      </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <div class="contact-info">
+        <div class="main-info">
+            <div class="info-box" (click)="openSearch()">
+               
+                <div class="col-12">
+                  <span>Bộ lọc</span> 
+                  <ion-icon ios="ios-funnel" md="md-funnel"></ion-icon>
+                </div>    
+            </div>
+
+            <div class="info-box" (click)="openUnlike()">
+                <div class="col-12">
+                    <span>Danh sách bỏ qua</span> 
+                    <ion-icon ios="ios-list" md="md-list"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ion-content> 

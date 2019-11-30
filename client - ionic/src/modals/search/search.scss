@@ -1,0 +1,167 @@
+@import "../../theme/variables.scss";
+
+
+page-Search {
+  * {
+      color: white;
+    }
+
+    button .button-inner{
+        color:$grey-dark;
+    }
+    
+    .button-md {
+        background: none !important;
+        bottom: 0px !important;
+        font-size: 22px;
+        margin: 0px auto;    
+        width: 250px;
+    }
+
+    .bar-button-md{
+        font-size: 22px;
+    }
+
+    .bar-button-md:first-child {
+        margin-left: 0;
+        padding-top: 11.5px;
+    }
+
+    .flex{
+        align-items: center;
+        margin-bottom: 4px;
+    }
+    p{
+        margin-bottom:0!important;
+    }
+    i {
+        font-size: 10px;
+        margin-right: 8px;
+            width: 10px;
+    }
+    .image-background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.540),rgba(0, 0, 0, 0.540)) ,url('../assets/img/login-background.jpeg') ;
+        height:100vh;
+        background-size:cover;
+        background-position: center;
+        filter: blur(5px);
+    }
+    .trash-icon {
+        margin-right: 12px;
+    }
+
+    .col-9,.col-3{
+        padding:0!important;
+    }
+   
+    .col-3{
+        text-align: right;
+        span{
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          display: flex;
+          font-size: 15px;
+        }
+        i{
+            margin-right: 6px;
+            font-size: 16px;
+            width: 16px;
+        }
+    }
+
+    .title-search{
+        width: 86%;
+        height: 23px;
+        padding-bottom: 12px;
+        margin: 0 auto;
+        border-bottom: 1px solid rgba(238, 238, 238, 0.4);
+        display: flex;
+        align-items: center;
+        margin-top: 28px;
+        font-size: 17.5px;
+    }
+    ion-app.md [padding] {
+        padding-top: 0px;
+    }
+    .back-button-icon-md{
+        color:white;
+    }
+    ion-navbar.toolbar{
+        position: absolute;
+    left: 0;
+    }
+    
+    .add{
+        color:$light-blue-500;
+    }
+   
+    .contact-info {
+        padding: 11px 30px 30px;
+        p{
+            // color: $grey-darkest;
+            color: #fff;
+        }
+        
+        .main-info{
+            padding-bottom: 8px;
+            .head-info{
+                display: flex;
+                align-items: center;
+                p{
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+        }
+        .info-box{
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 16.5px;
+        }
+    }
+    .header-md::after {
+        background-image: none!important;
+    }
+   
+    .content-md {
+        background: none!important;
+    }
+
+    .toolbar-content-md{
+        order: 4;
+    }
+    .toolbar-background-md {
+        background: none!important;
+    }
+    .toolbar-title-md {
+        color:white;
+        text-align: center;
+        font-size: 23.5px !important;
+        margin-top: 8px;
+    }
+
+    .toolbar-md {
+        padding: 5px;
+        min-height: 48px;
+    }
+
+    button .button-inner {
+        color: #fff;
+    }
+
+    .Age {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .range-md.range-has-pin {
+        padding-top: 0px;
+    }
+
+    .range-md {
+        padding: 0;
+    }
+}

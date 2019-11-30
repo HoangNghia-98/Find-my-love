@@ -1,0 +1,75 @@
+
+<div class="preloader" [class.loaded]="loadDone" >
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    <div class="spinner-custom">
+    </div>
+    <i class="fa fa-heart icon-loader" aria-hidden="true"></i>
+</div>
+<ion-header>
+
+    <ion-toolbar>
+        <ion-buttons start (click)="dismiss()">
+            <button ion-button icon-only color="royal">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>
+            <div class="row">
+                <div class="col-3 image">
+                    <img src="{{user.photoURL || 'https://i.imgur.com/6RUJRyM.png'}}">
+                </div>
+                <div class="col-9 flex-column title-info">
+                    <div class="name">{{user.displayName || 'Khách'}}</div>
+                    <span *ngIf="!user.isOnline" item-start>{{user.lastOnline | calTimeOnline}} </span>
+                    <span *ngIf="user.isOnline" item-start> Online</span>
+                </div>
+            </div>
+
+        </ion-title>
+        <ion-buttons end (click)="apirtc.MakeCall(calleeId)">
+          <button ion-button icon-only >
+              <ion-icon name="videocam" color="grey"></ion-icon>
+          </button>
+      </ion-buttons>
+        <!-- <ion-buttons end (click)="navProfile()"> -->
+            <ion-buttons end >
+            <button ion-button icon-only (click)="toggleMenu = !toggleMenu">
+                <ion-icon  md="md-more" color="primary"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+    <div class="collapse-menu" [class.show-menu]="toggleMenu">
+      <div class="line" (click)="navProfile()">
+          <i class="far fa-user"></i>
+          <span>Thông tin người dùng</span>
+      </div>
+      <div class="line" (click)="navInviteSupport()">
+          <i class="fas fa-users"></i>
+          <span>Mời người tư vấn</span>
+      </div>
+    </div>
+</ion-header>
+
+
+<ion-content padding >
+    <div class="container-message" #scrollMe >
+       
+    </div>
+</ion-content>
+<ion-footer >
+    <ion-grid>
+        <ion-row>
+            <ion-col class="col-10">
+                <ion-input type="text" placeholder="Nhập tin nhắn" name="message" (keyup.enter)="sendMessage()"
+                    [(ngModel)]="message"></ion-input>
+            </ion-col>
+            <ion-col class="col-2" (click)="sendMessage()">
+                <ion-icon name="paper-plane"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>
+
+
+

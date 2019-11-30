@@ -1,0 +1,57 @@
+
+<div class="image-background">
+
+</div>
+
+<div (click)="navWelcome()" class="back-btn">
+    <ion-icon name="arrow-back"></ion-icon>
+</div>
+
+<ion-content style="margin-top:56px;">
+    <div class="image-logo">
+        <img src="assets/img/logo.png">
+    </div>
+    <form (ngSubmit)="login()" [formGroup]="loginForm">
+        <ion-list inset>
+
+            <ion-item [ngClass]="{ invalid: emailErrors.hasError('*', ['touched', 'dirty']) }">
+                <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <div ngxErrors="email" #emailErrors="ngxErrors">
+                <div [ngxError]="['email', 'required']" [when]="['touched', 'dirty']">Email không hợp lệ</div>
+            </div>
+
+            <ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
+                <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+            </ion-item>
+
+            <div ngxErrors="password" #passwordErrors="ngxErrors">
+                <div [ngxError]="['minlength', 'required']" [when]="['touched']">Mật khẩu có ít nhất 6 kí tự</div>
+            </div>
+        </ion-list>
+
+        <div class="w-100 text-center">
+            <button type="submit" [disabled]="!loginForm.valid" block ion-button round color="white" class="primary-color">Đăng
+                nhập</button>
+        </div>
+        <div class="w-100 text-right mb-4">
+            <a>Quên mật khẩu</a>
+        </div>
+    </form>
+    <fieldset>
+        <legend>hoặc</legend>
+        <div class="social-box">
+            <button ion-button round color="blue" class="social-login col-6" (click)="loginWithFacebook()"><i class="fab fa-facebook-f"></i><span
+                    style="color:white">FACEBOOK</span></button>
+            <button ion-button round color="red" class="social-login col-6" (click)="loginWithGoogle()"> <i class="fab fa-google"></i><span
+                    style="color:white">GOOGLE</span></button>
+        </div>
+
+
+    </fieldset>
+    <div class="w-100 sign-up">
+        <span>Nếu bạn chưa có tài khoản. Xin vui lòng</span><a (click)="navSignUp()">Đăng kí</a>
+    </div>
+
+</ion-content>

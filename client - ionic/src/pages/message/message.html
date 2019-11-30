@@ -1,0 +1,31 @@
+<div class="preloader" [class.loaded]="loadDone">
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    <div class="spinner-custom">
+    </div>
+    <i class="fa fa-heart icon-loader" aria-hidden="true"></i>
+</div>
+<ion-header>
+    <ion-toolbar color="white">
+        <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel"
+         [animated]="true" (ionCancel)="onCancel($event)" (ionInput)="getItems($event)">
+        </ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<!-- (click)="openChat(friend.info)" -->
+<ion-content padding>
+
+    <div *ngFor="let friend of friends" class="row" (click)="openChat(friend.info)">
+        <div class="image">
+            <img src="{{friend.info.photoURL || 'https://i.imgur.com/6RUJRyM.png'}}">
+            <div *ngIf="friend.info.isOnline" class="status">
+                <i class="fas fa-circle"></i>
+            </div>
+        </div>
+        <div class="flex-column title-info">
+            <div class="name-box"><span class="name">{{friend.info.displayName  || 'Khách'}}</span> <span class="time">{{friend.lastTime}}</span></div>
+            <span item-start> {{friend.lastMessage}}</span>
+        </div>
+    </div>
+</ion-content>

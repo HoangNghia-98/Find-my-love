@@ -1,0 +1,51 @@
+@import "../../theme/variables.scss";
+page-crush {
+    .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        font-size: 28px;
+       
+    }
+    .fa-facebook-messenger{
+        color: white;
+    }
+    .fa-user-plus{
+        color: white;
+        font-size: 20px;
+        margin-left: 4px;
+    }
+    .fab-md{
+        background: linear-gradient(to bottom left,rgba(245, 64, 115, 0.82), rgba(255, 176, 198, 0.7));
+    }
+    ion-icon.icon.icon-md.item-icon {
+        width: 50px;
+        height: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .image-crush{
+        border-radius: 50%;
+    }
+    
+   
+    ion-item:first-child{
+        margin-top: 12px!important;
+    }
+    .item-inner {
+        margin-left: 8px!important;
+    }
+    .label-md{
+        margin:0;
+    }
+    .heart-box , .heart-box *{
+        color: #db6d8a!important;
+    }
+    .grey-span{
+      .button-inner{
+        color:$grey!important;
+      }
+     
+    }
+}

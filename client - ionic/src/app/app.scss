@@ -1,0 +1,305 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import "../theme/variables.scss";
+*{
+    font-family: 'Open Sans', sans-serif;
+    color:$grey-darker;
+}
+a:hover{
+    text-decoration:none!important;
+}
+
+.primary-color span{
+    color:$brand-primary!important;
+}
+.menu{
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    z-index: 999;
+    i{
+        font-size: 24px;
+        width: 24px;
+        color:$grey-lighter;
+    }
+}
+.toast-md{
+    .toast-message{
+        padding: 14px 16px 14px;
+       div,i{
+        color:white;
+       }
+       i{
+           margin-right:8px;
+       }
+    }
+    .toast-wrapper{
+        width: 80%;
+        transform: translateY(-10%)!important;
+        border-radius: 4px;
+    }
+} 
+
+.success-toast{
+    .toast-wrapper{
+        background-color: $brand-success;
+        color:white;
+    }
+}
+.error-toast{
+    .toast-wrapper{
+        background-color: $brand-danger;
+        color:white;
+    }
+    .button-inner{
+        color:white;
+    }
+}
+button .button-inner{
+    color:white;
+}
+.back-btn {
+    position: absolute;
+    font-size: 22px;
+    padding: 16px 24px;
+    ion-icon{
+        color:$grey;
+    }
+}
+
+.splash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom left,#f8c987, #d75079);
+}
+.sk-folding-cube {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+  
+  .sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); 
+  }
+  .sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+            animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  .sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+            transform: scale(1.1) rotateZ(90deg);
+  }
+  .sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+            transform: scale(1.1) rotateZ(180deg);
+  }
+  .sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+            transform: scale(1.1) rotateZ(270deg);
+  }
+  .sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  .sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; 
+  }
+  .sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+  }
+  @-webkit-keyframes sk-foldCubeAngle {
+    0%, 10% {
+      -webkit-transform: perspective(140px) rotateX(-180deg);
+              transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+              transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+      -webkit-transform: perspective(140px) rotateY(180deg);
+              transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    } 
+  }
+  
+  @keyframes sk-foldCubeAngle {
+    0%, 10% {
+      -webkit-transform: perspective(140px) rotateX(-180deg);
+              transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+              transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+      -webkit-transform: perspective(140px) rotateY(180deg);
+              transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    }
+  }
+
+  //Loader
+  .preloader {
+	align-items: center;
+	display: flex;
+	height: calc(100vh - 56px);
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.loaded.preloader {
+	opacity: 0;
+    transition: 1.1s ease;
+    z-index: 0;
+}
+
+.loader-section {
+  height: 100%;
+  position: fixed;
+  transition: 0s ease all;
+  top: 0;
+  width: 50%;
+}
+
+.section-left {
+    background: linear-gradient(to right, rgba(255, 159, 181, 0.98), rgba(255, 145, 176, 0.82));
+  left: 0;
+}
+
+.section-right {
+  background: linear-gradient(to right, rgba(255, 145, 176, 0.82), rgba(251, 195, 210, 0.82));
+  right: 0;
+}
+
+.loaded .loader-section.section-left {
+  transform: translateY(-100%);
+	transition: 1s ease all;
+}
+
+.loaded .loader-section.section-right {
+  transform: translateY(100%);
+	transition: 1s ease all;
+}
+
+.spinner-custom {
+	animation: spinner .7s infinite linear;
+	border: 2px solid rgba(0, 0, 0, 0.2);	
+	border-radius: 50%;
+	border-top-color: #ffffff;
+	height: 7em;
+	position: relative;	 
+	width: 7em;
+	z-index: 1000;
+}
+
+.icon-loader {
+	color: #ffffff;
+    font-size: 36px;
+    width: 36px;
+  position: fixed;
+  left: 44%;
+  bottom: 52%;
+	text-shadow: 1px 1px 1px #e2e2e2;
+}
+
+@keyframes spinner {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+.btn-effect{
+    transition: all 0.4s ease-in;
+    position: relative;
+    &:before {
+        content: '';
+        background-color: aliceblue;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scale(0.001, 0.001);
+      }
+    &:hover{
+        outline: 0;
+        &:before {
+            animation: effect_dylan 0.8s ease-out;
+        }
+    }
+    
+}
+@keyframes effect_dylan {
+    50% {
+      transform: scale(1.5, 1.5);
+      opacity: 0;
+    }
+    99% {
+      transform: scale(0.001, 0.001);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.001, 0.001);
+      opacity: 1;
+    }
+}
+.empty-list{
+  height: 100%;
+  display: flex;
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button .button-inner{
+      color:$brand-primary;
+    }
+  }
+}

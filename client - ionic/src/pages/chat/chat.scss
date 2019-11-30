@@ -1,0 +1,222 @@
+page-chat {
+  .collapse-menu{
+    position: absolute;
+    top:57px;
+    right: 1px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    z-index: 9999;
+    border: 1px solid #f7f7f7;
+    box-shadow: 0 0 1px 1px #ececec;
+    padding: 8px 12px;  
+    transition: all 0.25s;
+    opacity:0;
+    width: 200px;
+    height: 0;
+    .line{
+      display: flex;
+      align-items: center;
+      padding: 4px 0;
+      border-bottom: 1px solid #eee;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+  .show-menu{
+    opacity:1!important;
+    height: 77px!important;
+  }
+  .col-10{
+    padding-left: 0;
+  }
+  
+    .toolbar-md{
+        padding: 0 4px!important;
+    }
+    .toolbar-background-md{
+        background: rgba(255, 209, 222, 0.05);
+    }
+    ion-col {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .text-input-md{
+        margin-left: 16px;
+    }
+    .ion-md-paper-plane {
+        font-size: 22px;
+        color:$brand-primary;
+    }
+    .toolbar-content-md{
+        order:4!important;
+        text-align: center;
+    }
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .image{
+      padding:8px;
+      width: 45px;
+      height: 45px;
+      img{
+          border-radius: 50%;
+          width: 28px;
+          height: 28px;
+      }
+      
+  }
+    .title-info{
+        justify-content: center;
+        padding-left: 6px;
+        *{
+            text-align: left;
+            line-height: 20px;
+        }
+        .name{
+            font-size: 16px;
+        }
+        span{
+            font-size: 14px;
+        }
+    }
+    .scroll-content{
+        padding: 0!important;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .container-message{
+            padding: 16px 8px;
+            overflow-y: scroll;
+        }
+        .me {
+          .avatar-chat{
+            margin-left: 6px;
+          }
+            .message-box{
+         
+              .line-box{
+                align-items: flex-end;
+              }
+                .line{
+                    background-color: $brand-primary;
+                    color:white;
+                    border-bottom-left-radius: 12px;
+                    border-top-left-radius: 12px;
+                }
+                .first-line{
+                    border-top-right-radius: 12px;
+                }
+                .last-line{
+                    border-bottom-right-radius: 12px;
+                }
+            }
+            
+        }
+        .other{
+          .avatar-chat{
+            margin-right: 6px;
+          }
+            .message-box {
+              .line-box{
+                align-items: flex-start;
+              }
+              
+                .line{
+                    background-color: #f1f0f0;
+                    color: #616161;
+                    border-bottom-right-radius: 12px;
+                    border-top-right-radius: 12px;
+                }
+                .first-line{
+                    border-top-left-radius: 12px;
+                }
+                .last-line{
+                    border-bottom-left-radius: 12px;
+                }
+            }
+            .avatar {
+                height: 28px;
+                width: 28px;
+                margin-top: auto;
+                img{
+                    border-radius: 50%;
+                }
+            }
+        }
+        .message {
+            margin: 10px 0px;
+            display: flex;        
+            .avatar-chat{
+              width: 28px;
+              height: 28px;
+              margin-top: auto;
+              margin-bottom: 4px;
+            img{
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              max-width: unset;
+            }
+          }    
+            .message-box{
+                width: 100%;
+                padding: 0 0 1px 0;
+                display: flex;
+                flex-direction: column;
+                .line-box{
+                  width: 100%;
+                  display: flex;
+                  flex-direction: column;
+                    .date-send {
+                        margin: 0 auto;
+                        height: 0;
+                        opacity: 0;
+                        transition-property: opacity;
+                        transition-duration: 0.5s;            
+                    }
+                    .status-message{
+                      height: 0;
+                      opacity: 0;
+                      transition-property: opacity;
+                      transition-duration: 0.5s;
+                    }
+                    .line{
+                      padding: 5px 8px 6px;
+                      margin: 0 0 1px 0;
+                  }
+                }
+                
+                .one-line{
+                    border-bottom-left-radius: 12px;
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                }
+            }
+        }
+    }
+    .show-info{
+      opacity: 1!important;
+      height: 100%!important;
+    }
+    .hidden-info{
+      animation-name: hidden-info;
+      animation-duration: 0.5;
+    }
+    @keyframes hidden-info {
+      0% {
+        height: 100%;
+      }
+      50% {
+        height: 50%;
+      }
+      100% {
+        height: 0;
+      }
+    }
+    
+}

@@ -1,0 +1,55 @@
+<ion-content>
+    <div (click)="goBack()" class="back-btn">
+        <ion-icon name="arrow-back"></ion-icon>
+    </div>
+    
+     <div padding>
+        <ion-segment [(ngModel)]="step">
+          <ion-segment-button value="1">
+            Người tư vấn
+          </ion-segment-button>
+          <ion-segment-button value="2">
+            Đối tượng
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      <div [ngSwitch]="step" class="content-box">
+          <ion-list *ngSwitchCase="'1'">
+            <ion-item *ngFor="let admin of admins" (click)="selectedAmin = admin" [class.selected]="selectedAmin == admin">
+              <div class="avatar-box">
+                <img src="{{admin.photoURL || defaultImage}}">
+              </div>
+              <h2>{{admin.displayName ||"Không rõ"}}</h2>
+            </ion-item>
+
+          </ion-list>
+        
+          <ion-list *ngSwitchCase="'2'">
+              <div  *ngIf="!friends || friends.length == 0" class="empty-list">
+                  <div class="container">
+                      <label >Danh sách rỗng</label>
+                      <button  ion-button outline color="primary" (click)="moveTabView()">Thêm người đối tượng</button>
+                  </div>
+                  
+              </div>
+            <ion-item *ngFor="let friend of friends" (click)="selectedFriend= friend" [class.selected]="selectedFriend == friend">
+                <div class="avatar-box">
+                <img src="{{friend.info.photoURL || defaultImage}}">
+              </div>
+              <h2>{{friend.info.displayName ||"Không rõ"}}</h2>
+            </ion-item>
+          </ion-list>
+        </div>
+        <div class="next-step" (click)="step='2'" *ngIf="step=='1'&& selectedAmin && !selectedFriend ">
+          <span>Bước 2</span>
+            <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="step-done" *ngIf="selectedAmin&&selectedFriend &&loadingSupport">
+          <ion-spinner name="ios" color="white" ></ion-spinner>
+      </div>
+        <div class="step-done"  *ngIf="selectedAmin&&selectedFriend && !loadingSupport" (click)="getSupport()">
+            
+            <i  class="fas fa-check"></i>
+          <span >Hoàn tất</span>
+        </div>
+</ion-content>

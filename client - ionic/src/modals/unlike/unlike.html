@@ -1,0 +1,39 @@
+<div class="preloader" [class.loaded]="loadDone">
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    <div class="spinner-custom">
+    </div>
+    <i class="fa fa-heart icon-loader" aria-hidden="true"></i>
+</div>
+<ion-header>
+    <ion-toolbar>
+
+        <ion-buttons start>
+          <button ion-button (click)="dismiss()">
+            <ion-icon name="md-close"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>
+            Danh sách bỏ qua
+        </ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<!-- (click)="openChat(friend.info)" -->
+<ion-content padding>
+  <div *ngIf="!unlikes || unlikes.length == 0" class="empty-list">
+      <div class="container">
+          <label >Danh sách rỗng</label>
+          <button ion-button outline color="primary" (click)="dismiss()">Quay lại</button>
+      </div>
+      
+  </div>
+    <div *ngFor="let unlike of unlikes;let i = index" class="row" (click)="openChat(unlike)">
+        <div class="col-2 image">
+            <img src="{{unlike.photoURL || 'https://i.imgur.com/6RUJRyM.png'}}">
+        </div>
+        <div class="col-10 flex-column title-info">
+            <div class="name">{{unlike.displayName || 'Khách'}}<span (click)="deleteUnlike(i,$event)" class="time"><i class="fas fa-times"></i></span></div>
+        </div>
+    </div>
+</ion-content>
